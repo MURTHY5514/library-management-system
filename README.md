@@ -47,27 +47,39 @@ To run the Library Management System on your local machine, follow these steps:
   cd library-management-system
 ```
 
-### 3. Install Dependencies
+### 3. Set Up a Virtual Environment (Optional but Recommended)
+```bash
+  python -m venv my_venv
+```
+here  `my_venv` is the name of virtual env give your name
+
+### 4. Activate virtual environment
+```bash
+  my_venv\Scripts\activate
+```
+here  `my_venv` is the name of virtual env give your name
+
+### 5. Install Dependencies
 ```bash
   pip install -r requirements.txt
 ```
 
 
-### 4. Apply Database Migrations
+### 6. Apply Database Migrations
 ```bash
   python manage.py migrate
 
 ```
-### 5. Create a Superuser (Optional, for admin access)
+### 7. Create a Superuser (Optional, for admin access)
 ```bash
   python manage.py createsuperuser
 
 ```
-### 6. Run the Development Server
+### 8. Run the Development Server
 ```bash
   python manage.py runserver
 ```
-### 7. Access the Application
+### 9. Access the Application
   Open a web browser and go to http://localhost:8000 to access the Library Management System.
 
 
