@@ -1,0 +1,19 @@
+#id_gender{
+    display: flex;
+}
+input[type='radio']{
+    margin-left: 20px;
+}
+
+#id_job_city>div{
+    display: inline-flex;
+}
+input[type='checkbox']{
+    margin-left: 20px;
+}
+.logout{
+    position: absolute;
+    right: 10px;
+    top: 30px;
+
+}

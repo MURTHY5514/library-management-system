@@ -1,0 +1,26 @@
+{% extends "app/base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-2 col-sm-12">
+        <h4 class="text-center alert alert-info">Book Details - {{book.title}}(ID : {{book.id}})</h4>
+        <!-- Display book details -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{ book.title }}</h4>
+                <p class="card-text">Author: {{ book.author }}</p>
+                <p class="card-text">Publisher: {{ book.publisher }}</p>
+                <p class="card-text">Language: {{ book.language }}</p>
+                <p class="card-text">pages: {{ book.pages }}</p>
+                <p class="card-text">Publication Date: {{ book.publication_date }}</p>
+                <p class="card-text">Book Summary: {{ book.summary }}</p>
+                {% if perms.app.change_book %}
+                    <a href="{% url 'update' book.id %}" class="btn btn-warning">Edit</a>
+                {% else %}
+                    <span class="btn btn-warning">No Edit</span>
+                {% endif %}
+                <a href="{% url 'book_list_view' %}" class="btn btn-info">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

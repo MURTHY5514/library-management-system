@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'app/css/bootstrap.css' %}">
+    <style>
+        body {
+            background-color: #c0c0c0;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-2 col-sm-12">
+            <h4 class="text-center alert alert-danger">404 - Page Not Found</h4>
+            <p class="text-center">The page you are looking for could not be found.</p>
+            <p class="text-center"><a href="{% url 'book_list_view' %}" class="btn btn-primary">Go to Home Page</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
